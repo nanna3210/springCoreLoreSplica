@@ -1,7 +1,7 @@
 package org.nanna;
 
 import org.nanna.configuration.AppConfig;
-import org.nanna.service.ProductService;
+import org.nanna.controller.DemoController;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
@@ -10,8 +10,9 @@ public class Main {
         
         
         var context = new AnnotationConfigApplicationContext ( AppConfig.class );
-        context.getBean ( ProductService.class );
+        var nanna = context.getBean ( DemoController.class );
 //        System.out.println (productController);
     
+        nanna.doubleValue ( 23 );
     }
 }
