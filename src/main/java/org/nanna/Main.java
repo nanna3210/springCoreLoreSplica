@@ -1,7 +1,7 @@
 package org.nanna;
 
 import org.nanna.configuration.AppConfig;
-import org.nanna.controller.LoginController;
+import org.nanna.service.ProductService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
@@ -10,9 +10,8 @@ public class Main {
         
         
         var context = new AnnotationConfigApplicationContext ( AppConfig.class );
-        LoginController loginController = context.getBean (  LoginController.class );
-        System.out.println (loginController.getServie ());
-        
-        
+        context.getBean ( ProductService.class );
+//        System.out.println (productController);
+    
     }
 }

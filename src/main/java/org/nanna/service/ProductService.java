@@ -6,8 +6,9 @@ import org.springframework.stereotype.Component;
 public class ProductService {
 
     
-    public String getProductService() {
-        System.out.println ("_______________");
-        return "nanna";
+    private  final  PurchaseService purchaseService;
+    
+    public ProductService ( PurchaseService purchaseService ) {
+        this.purchaseService = purchaseService;
     }
 }
